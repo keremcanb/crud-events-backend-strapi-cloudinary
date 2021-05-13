@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
     cors: {
       enabled: true,
       // headers: '*',
-      origin: ["http://localhost", "https://next-events.herokuapp.com"],
+      origin: ["http://localhost", "https://next-events-mocha.vercel.app"],
     },
   },
 });
