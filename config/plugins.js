@@ -10,5 +10,16 @@ module.exports = ({ env }) => ({
       upload: {},
       delete: {}
     }
+  },
+  email: {
+    provider: 'sendgrid',
+    providerOptions: {
+      apiKey: env('SENDGRID_API_KEY'),
+    },
+    settings: {
+      defaultFrom: 'keremcan@gmail.com',
+      defaultReplyTo: 'keremcan@gmail.com',
+      testAddress: 'keremcan@gmail.com',
+    },
   }
 });
