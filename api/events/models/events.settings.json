@@ -13,7 +13,8 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "slug": {
       "type": "uid",
@@ -28,11 +29,7 @@
       "required": true
     },
     "date": {
-      "type": "datetime",
-      "required": true
-    },
-    "time": {
-      "type": "string",
+      "type": "date",
       "required": true
     },
     "performers": {
@@ -47,9 +44,7 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false,
@@ -59,6 +54,17 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "events"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "genre": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "required": true
     }
   }
 }
