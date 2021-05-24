@@ -57,10 +57,12 @@
     },
     "featured": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "genre": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "time": {
       "type": "string",
